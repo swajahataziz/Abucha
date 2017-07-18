@@ -1,0 +1,44 @@
+<component name="libraryTable">
+  <library name="looker-latest">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/bigquery/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/hive2_v0_x/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/hive2_v1_x/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/presto/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/qubole/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/spanner/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/vertica_v5/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/looker-jdbc-common/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/src/test/groovy" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/puma-aae7c7a5342a/ext/puma_http11" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/bcrypt-ruby-3.0.1-java/ext/jruby" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/bcrypt-ruby-3.0.1-java/spec" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/nokogiri-1.7.0.1-java/ext/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/thread_safe-0.3.5-java/ext" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/thread_safe-0.3.5-java/test/src" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/helltool-release-4.10/lib/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/bigquery/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/hive2_v0_x/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/hive2_v1_x/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/presto/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/qubole/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/spanner/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/jdbc-drivers/vertica_v5/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/looker-jdbc-common/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/helltool-java-gem-66333206fa06/src/test/groovy" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/bundler/gems/puma-aae7c7a5342a/ext/puma_http11" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/bcrypt-ruby-3.0.1-java/ext/jruby" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/bcrypt-ruby-3.0.1-java/spec" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/nokogiri-1.7.0.1-java/ext/java" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/thread_safe-0.3.5-java/ext" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/gems/thread_safe-0.3.5-java/test/src" />
+      <root url="jar://$PROJECT_DIR$/../../looker-latest.jar!/helltool-release-4.10/lib/java" />
+    </SOURCES>
+  </library>
+</component>

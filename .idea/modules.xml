@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Abucha.iml" filepath="$PROJECT_DIR$/Abucha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AbuchaCommon/AbuchaCommon.iml" filepath="$PROJECT_DIR$/AbuchaCommon/AbuchaCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AbuchaCore/AbuchaCore.iml" filepath="$PROJECT_DIR$/AbuchaCore/AbuchaCore.iml" />
+    </modules>
+  </component>
+</project>
