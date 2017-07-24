@@ -41,7 +41,15 @@
             <artifactId>scalaj-time_2.10.2</artifactId>
             <version>0.7</version>
         </dependency>
+        <dependency>
+            <groupId>com.beachape</groupId>
+            <artifactId>enumeratum_2.11</artifactId>
+            <version>1.5.12</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.lukehutch</groupId>
+            <artifactId>fast-classpath-scanner</artifactId>
+            <version>LATEST</version>
+        </dependency>
     </dependencies>
-
-    
 </project>
