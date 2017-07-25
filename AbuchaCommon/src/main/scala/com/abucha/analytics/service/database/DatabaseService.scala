@@ -3,7 +3,9 @@ package com.abucha.analytics.service.database
 import java.util
 
 import com.abucha.analytics.model.database.{Database, DatabaseDriver, DatabaseHost, DatabaseType}
+import io.github.lukehutch.fastclasspathscanner.FastClasspathScanner
 
+import scala.collection.JavaConversions
 import scala.collection.immutable.HashMap
 
 /**
@@ -20,7 +22,7 @@ trait DatabaseService[A <: Database] {
 
   object DataService {
     private val scanResult = new FastClasspathScanner("com.abucha.analytics.service.database").scan()
-    private val classes = scanResult.getNamesOfAllClasses.asScala.toList
+    private val classes = JavaConversions.asScalaBuffer(scanResult.getNamesOfAllClasses).toList
 
     def buildTypes(classes: List[String]): HashMap[String, DatabaseType[_ <: Database]] = {
 
@@ -77,7 +79,5 @@ trait DatabaseService[A <: Database] {
     }
 
   }
-
-
 
 }

@@ -26,7 +26,7 @@ class CustomDatabaseService(driverClass: String,
                                                           editable,deletable,dbName, driverClass, jdbcUrl, query)
 
   override def parse(driverClass: String, jdbcUrl: String, database: CustomDatabase): DatabaseHost = {
-    new DatabaseHost(null,null,null)
+    new DatabaseHost(null,null,0)
   }
 
   override def formatURL(dbHost: DatabaseHost, database: CustomDatabase): String = database.jdbcUrl
