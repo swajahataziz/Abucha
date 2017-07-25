@@ -23,8 +23,6 @@ object DatabaseType {
   private val scanResult = new FastClasspathScanner("com.abucha.analytics.model.database.types").scan()
   private val classes = scanResult.getNamesOfAllClasses.asScala.toList
 
-  val types: HashMap[String, DatabaseType[_ <: Database]] = buildTypes(classes)
-
   def buildTypes(classes: List[String]): HashMap[String, DatabaseType[_ <: Database]] = {
 
     def mapAccumulator(classes: List[String],
@@ -41,6 +39,8 @@ object DatabaseType {
     }
     mapAccumulator(classes,new HashMap[String, DatabaseType[_ <: Database]])
   }
+
+  val types: HashMap[String, DatabaseType[_ <: Database]] = buildTypes(classes)
 
   def getDatabaseType(var0: String): DatabaseType[_ <:Database] = {
     types.get(var0).asInstanceOf[DatabaseType[_ <: Database]]
