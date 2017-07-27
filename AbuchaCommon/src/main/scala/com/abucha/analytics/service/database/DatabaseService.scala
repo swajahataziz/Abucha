@@ -13,14 +13,14 @@ import scala.collection.immutable.HashMap
   */
 trait DatabaseService[A <: Database] {
 
-  def createDatabase(): A
-  abstract def parse(var1: String, var2: String, var3: A): DatabaseHost
-  abstract def formatURL(var1: DatabaseHost, var2: A)
+  def createDatabase(url: String): A
+  abstract def parseUrl(var1: String): DatabaseHost
+  abstract def formatURL(var1: DatabaseHost, var2: A): String
   abstract def supportsDriver(var1: String): Boolean
   abstract def isDriverInstalled: Boolean
   abstract def getDefaultPort: Int
 
-  object DataService {
+  object DatabaseService {
     private val scanResult = new FastClasspathScanner("com.abucha.analytics.service.database").scan()
     private val classes = JavaConversions.asScalaBuffer(scanResult.getNamesOfAllClasses).toList
 

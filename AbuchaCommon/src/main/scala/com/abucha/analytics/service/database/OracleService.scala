@@ -18,15 +18,14 @@ class OracleService (val driverClass: String = "oracle.jdbc.OracleDriver",
                      editable: Boolean,
                      deletable: Boolean,
                      dbName: String,
-                     jdbcUrl: String,
                      query: String,
                      pattern: Pattern = Pattern.compile("^jdbc:oracle:thin:@([^:]+):(\\d+):(.+)$"),
-                     format: String = "jdbc:oracle:thin:@%s:%d:%s"
+                     urlFormat: String = "jdbc:oracle:thin:@%s:%d:%s"
                     )extends GenericDatabaseService[Oracle] {
 
   var sid: String = _
 
-  override def parseURL(url: String, db: Oracle): DatabaseHost = {
+  def parseUrl(url: String): DatabaseHost = {
     val matcher: Matcher = pattern.matcher(url)
     var host: String = null
     var port: Int = 0
@@ -39,11 +38,12 @@ class OracleService (val driverClass: String = "oracle.jdbc.OracleDriver",
     new DatabaseHost(host, null, port)
   }
 
-  override def createDatabase(): Oracle = new Oracle(this.sid, id, path, urlPath, name,createdBy,description,createdDate,
-                                                      editable,deletable,dbName, driverClass, jdbcUrl, query)
+  override def createDatabase(url: String): Oracle = new Oracle(this.sid, this.id, this.path, this.urlPath, this.name,
+    this.createdBy, this.description, this.createdDate, this.editable, this.deletable, this.dbName, this.driverClass,
+    url, this.query)
 
-  override def formatURL(databaseHost: DatabaseHost, db: Oracle): Unit =
-    String.format(format,databaseHost.hostName, databaseHost.port, db.sid)
+  override def formatURL(databaseHost: DatabaseHost, db: Oracle): String =
+    String.format(urlFormat,databaseHost.hostName, databaseHost.port, db.sid)
 
   override def getDefaultPort: Int = 1521
 

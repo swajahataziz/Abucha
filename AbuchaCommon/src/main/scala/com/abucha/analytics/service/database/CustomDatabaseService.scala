@@ -7,7 +7,7 @@ import org.joda.time.DateTime
 /**
   * Created by Syed.Aziz on 25/07/2017.
   */
-class CustomDatabaseService(driverClass: String,
+class CustomDatabaseService (driverClass: String,
                             dbType: String = "Custom",
                             id: String,
                             path: String,
@@ -22,10 +22,11 @@ class CustomDatabaseService(driverClass: String,
                             jdbcUrl: String,
                             query: String) extends DatabaseService[CustomDatabase]{
 
-  override def createDatabase(): CustomDatabase = new CustomDatabase(id, path, urlPath, name,createdBy,description,createdDate,
-                                                          editable,deletable,dbName, driverClass, jdbcUrl, query)
+  override def createDatabase(url: String): CustomDatabase = new CustomDatabase(this.id, this.path, this.urlPath,
+                                                                  this.name, this.createdBy, this.description,
+    this.createdDate, this.editable, this.deletable, this.dbName, this.driverClass, url, this.query)
 
-  override def parse(driverClass: String, jdbcUrl: String, database: CustomDatabase): DatabaseHost = {
+  override def parseUrl(jdbcUrl: String): DatabaseHost = {
     new DatabaseHost(null,null,0)
   }
 
