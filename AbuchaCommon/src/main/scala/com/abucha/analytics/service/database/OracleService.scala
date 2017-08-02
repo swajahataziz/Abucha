@@ -35,7 +35,7 @@ class OracleService (val driverClass: String = "oracle.jdbc.OracleDriver",
       port = matcher.group(2).toInt
       sid = matcher.group(3)
     }
-    new DatabaseHost(host, null, port)
+    new DatabaseHost(host, None, port, None)
   }
 
   override def createDatabase(url: String): Oracle = new Oracle(this.sid, this.id, this.path, this.urlPath, this.name,
