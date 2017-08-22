@@ -1,11 +1,11 @@
 package com.abucha.analytics.core.dsl.component
 
-import java.text.Collator
-import java.util.{Locale, Properties}
+import java.io.PrintWriter
+import java.util.{Properties}
 
 import com.abucha.analytics.core.dsl.ComponentInstance
 import com.abucha.analytics.core.dsl.component.ComponentRecord.ComponentType
-import com.abucha.analytics.core.util.DataSerialisable
+import com.abucha.analytics.core.util.{DataSerialisable, ExtendedToolkit, Toolkit}
 import com.abucha.analytics.core.util.dto.DataTransferable
 import org.joda.time.DateTime
 import org.w3c.dom.Element
@@ -13,7 +13,7 @@ import org.w3c.dom.Element
 import scala.collection.BitSet
 
 class ComponentRecord(val scope: Int, val componentType: ComponentType, val user: String, val componentPath: String,
-                      val alias: String, val componentProperties: Properties, val cratedByUser: String,
+                      val alias: Option[String], val componentProperties: Properties, val cratedByUser: String,
                       val dateCrated: DateTime, val modifiedByUser: String, val dateModified: DateTime, val id: Int,
                       val hash: Int, val privatePath: String, val privateComponentRecord: ComponentRecord)
                       //TODO val collator: Collator = Locale.getDefault().getLanguage.equals("en"))?null:....
@@ -25,6 +25,35 @@ class ComponentRecord(val scope: Int, val componentType: ComponentType, val user
 
 
 
+  def write(writer: PrintWriter): Unit = {
+    val isCompact:Boolean = Toolkit.isCompact()
+    val componentHeader: String = if (!isCompact) {
+      " class=\"com.abucha.analytics.core.dsl.ComponentRecord\""
+    } else ""
+    writer.print("<assetEntry"+componentHeader + " scope=\"" + this.scope + "\" type=\"" + this.componentType.id + "\">")
+    writer.print("<path>")
+    writer.print("<![CDATA[" + this.componentPath + "]]>")
+    writer.print("</path>")
+    if (!isCompact) {
+      alias match {
+        case Some(`alias`) => writer.print("<alias>")
+          writer.print("<![CDATA[" + alias + "]]>")
+          writer.print("</alias>")
+        case None => ""
+      }
+      writer.print("<description>")
+      writer.print("<![CDATA[" )
+
+
+    }
+
+
+
+
+
+
+  }
+
   /*TODO: Check if compareTo is really needed in Scala, especially with immutable objects*/
   def compareTo(o: AnyRef): Int = {
     if(!o.isInstanceOf[ComponentRecord]) {
@@ -32,10 +61,6 @@ class ComponentRecord(val scope: Int, val componentType: ComponentType, val user
     }
     else 1
   }
-
-
-
-
 }
 
 object ComponentRecord{
