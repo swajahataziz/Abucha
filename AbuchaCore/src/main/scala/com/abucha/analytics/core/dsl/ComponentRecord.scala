@@ -26,7 +26,7 @@ class ComponentRecord(val scope: Int, val componentType: ComponentType, val user
 
 
   def write(writer: PrintWriter): Unit = {
-    val isCompact:Boolean = Toolkit.isCompact()
+    val isCompact:Boolean = Toolkit.isCompact
     val componentHeader: String = if (!isCompact) {
       " class=\"com.abucha.analytics.core.dsl.ComponentRecord\""
     } else ""
@@ -53,6 +53,14 @@ class ComponentRecord(val scope: Int, val componentType: ComponentType, val user
 
 
   }
+
+  def getDescription(isCompact: Boolean, isTrue: Boolean): String = {
+    Catalog
+  }
+
+
+  def getProperty(key: String): String = this.componentProperties.getProperty(key)
+
 
   /*TODO: Check if compareTo is really needed in Scala, especially with immutable objects*/
   def compareTo(o: AnyRef): Int = {

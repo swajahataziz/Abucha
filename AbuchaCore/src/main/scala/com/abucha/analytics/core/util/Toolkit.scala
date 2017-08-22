@@ -1,17 +1,16 @@
 package com.abucha.analytics.core.util
 
-class Toolkit {
+class Toolkit(val thradLocal: ThreadLocal[Boolean]) {
 
 }
 
 object Toolkit{
-  var threadLocal: ThreadLocal[Boolean] = null
 
-  def isCompact(): Boolean = {
-    threadLocal.get()
+  val threadLocal: ThreadLocal[Boolean] = {
+    val tl = new ThreadLocal[Boolean]
+    tl.set(false)
+    tl
   }
 
-  def getCompact(isCompact: Boolean): Unit = {
-    threadLocal.set(isCompact)
-  }
+  def isCompact: Boolean = threadLocal.get()
 }
