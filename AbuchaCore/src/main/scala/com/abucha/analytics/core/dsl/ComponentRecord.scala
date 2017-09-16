@@ -43,6 +43,7 @@ class ComponentRecord(val scope: Int, val componentType: ComponentType, val user
       }
       writer.print("<description>")
       writer.print("<![CDATA[" )
+      //TODO Complete the write method
 
 
     }
@@ -55,7 +56,6 @@ class ComponentRecord(val scope: Int, val componentType: ComponentType, val user
   }
 
   def getDescription(isCompact: Boolean, isTrue: Boolean): String = {
-    Catalog
   }
 
 

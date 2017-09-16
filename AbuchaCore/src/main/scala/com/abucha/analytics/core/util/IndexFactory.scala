@@ -32,6 +32,14 @@ class IndexFactory(val indexThreadMap: Map[ThreadGroup,Index], indexMap: Map[Str
     }
   }
 
+  def getDefaultIndex(indexName: String): Index = {
+
+  }
+
+  def getDefaultIndex(indexName: String, propertyName: String): Index = {
+
+  }
+
 }
 object IndexFactory {
 

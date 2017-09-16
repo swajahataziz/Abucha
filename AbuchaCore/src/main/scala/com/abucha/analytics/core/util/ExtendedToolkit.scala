@@ -1,6 +1,6 @@
 package com.abucha.analytics.core.util
 
-final class ExtendedToolkit extends Toolkit{
+final class ExtendedToolkit (threadLocal: ThreadLocal[Boolean]) extends Toolkit(threadLocal) {
 
 
 
